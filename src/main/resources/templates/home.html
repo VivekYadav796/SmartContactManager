@@ -10,7 +10,53 @@
 </head>
 <body>
     <div id="content">
-        <p>This is home page</p>
+       <section class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-16">
+            <div class="max-w-screen-xl mx-auto text-center px-6">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Smart Contact Manager</h1>
+                <p class="text-lg md:text-xl mb-6">
+                    Manage your contacts securely, anytime, anywhere.
+                </p>
+                <a href="/login" class="inline-block px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow hover:bg-gray-100">
+                    Get Started →
+                </a>
+            </div>
+        </section>
+         <section class="py-16 bg-gray-50 dark:bg-gray-900">
+            <div class="max-w-screen-xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12">Why Choose Smart Contact Manager?</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg dark:bg-gray-800">
+                        <h3 class="text-xl font-semibold text-blue-500 mb-3">🔐 Secure Authentication</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Login safely with Google OAuth2 or custom Spring Security authentication.
+                        </p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg dark:bg-gray-800">
+                        <h3 class="text-xl font-semibold text-blue-500 mb-3">📇 Easy Contact Management</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Add, edit, delete, and organize your personal and professional contacts seamlessly.
+                        </p>
+                    </div>
+                     <!-- Feature 3 -->
+                    <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg dark:bg-gray-800">
+                        <h3 class="text-xl font-semibold text-blue-500 mb-3">☁️ Cloud Ready</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Deployable in production with MySQL, Spring Boot, and OAuth2 support.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-12 bg-gradient-to-r from-indigo-600 to-purple-600 text-center text-indigo-600">
+            <h2 class="text-3xl font-bold mb-4">Start managing your contacts smarter today!</h2>
+            <a href="/signup" class="inline-block px-8 py-4 bg-blue-200 text-white-600 font-semibold rounded-lg shadow hover:bg-gray-100">
+                Sign Up Free
+            </a>
+        </section>
     </div>
 </body>
 </html>

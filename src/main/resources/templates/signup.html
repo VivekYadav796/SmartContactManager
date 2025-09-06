@@ -7,103 +7,92 @@
     <title>Sign-up</title>
 </head>
 
-<body>
-    <div id="content">
-        <div class="grid grid-cols-12">
-            <div class="col-span-8 md:col-span-2 lg:col-span-3 xl:col-span-4"></div>
-            <div class="col-span-12 md:col-span-8 lg:col-span-6 xl:col-span-4">
-                <div
-                    class="block p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-800 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-800">
-                    <!-- msg alert-->
-                    <!--<div data-th-replace="msgbox::msgboxx"></div>-->
+<body class="bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 h-screen overflow-hidden">
 
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Signup Here</h5>
-                    <p class="font-normal text-gray-700 dark:text-gray-400">Start managing contact on cloud..</p>
+  <div id="content" class="pt-10 flex justify-center">
+    <div class="w-full max-w-lg bg-white border border-gray-200 rounded-2xl shadow-xl p-8 dark:bg-gray-800 dark:border-gray-700">
 
-                    <form data-th-action="@{'/do-register'}" data-th-object="${userForm}" method="post" novalidate>
-                        <div class="text-left mt-4 mb-0"> <!-- margin top or margin bottom-->
-                            <div>
-                                <label for="name"
-                                    class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Username
-                                </label>
-                                <input type="text" id="name" data-th-field="*{name}"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="Enter Username" required >
-                                <div>
-                                    <p data-th-if="${#fields.hasErrors('name')}" data-th-errors="*{name}"
-                                        id="outlined_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400">
-                                        <span class="font-medium">Oh, snapp!</span> Some error message.
-                                    </p>
-                                </div>
-                            </div>
+      <!-- Heading -->
+      <h1 class="text-3xl font-extrabold text-center text-blue-600 dark:text-blue-400 mb-2">Create Account</h1>
+      <p class="text-center text-gray-600 dark:text-gray-300 mb-6">Start managing your contacts on the cloud 🌐</p>
 
-                            <div class="text-left mt-2">
-                                <label for="email"
-                                    class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Your
-                                    email</label>
-                                <input type="email" id="email" data-th-field="*{email}"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="name@gmail.com" required />
+      <!-- Signup Form -->
+      <form data-th-action="@{'/do-register'}" data-th-object="${userForm}" method="post" novalidate class="space-y-4">
 
-                                    <div>
-                                    <p data-th-if="${#fields.hasErrors('email')}" data-th-errors="*{email}"
-                                        id="outlined_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400">
-                                        <span class="font-medium">Oh, snapp!</span> Some error message.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="text-left mt-2">
-                                <label for="password"
-                                    class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">
-                                    Password</label>
-                                <input type="password" id="password" data-th-field="*{password}"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    required />
-
-                                    <div>
-                                    <p data-th-if="${#fields.hasErrors('password')}" data-th-errors="*{password}"
-                                        id="outlined_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400">
-                                        <span class="font-medium">Oh, snapp!</span> Some error message.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="text-left mt-2">
-                                <label for="phoneNo"
-                                    class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Contact No
-                                </label>
-                                <input data-th-field="*{phoneNo}" type="text" id="phoneNo"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    required />
-
-                                    <div>
-                                    <p data-th-if="${#fields.hasErrors('phoneNo')}" data-th-errors="*{phoneNo}"
-                                        id="outlined_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400">
-                                        <span class="font-medium">Oh, snapp!</span> Some error message.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="text-left mb-2">
-                                <label for="message"
-                                    class="block mt-2 mb-1 text-sm font-medium text-gray-900 dark:text-white">Your
-                                    message</label>
-                                <textarea data-th-field="*{about}" id="message" rows="4"
-                                    class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="Write your thoughts here..."></textarea>
-                            </div>
-
-                            <div class="mt-2 mb-0 flex justify-center">
-                                <button type="submit"
-                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Signup</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+        <!-- Username -->
+        <div>
+          <label for="name" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Username</label>
+          <input type="text" id="name" data-th-field="*{name}" placeholder="Enter username"
+            class="w-full p-3 text-sm border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white" required>
+          <p data-th-if="${#fields.hasErrors('name')}" data-th-errors="*{name}"
+            class="mt-1 text-xs text-red-600 dark:text-red-400">
+            <i class="fa-solid fa-circle-exclamation"></i> <span class="font-medium">Error:</span> Invalid name
+          </p>
         </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+          <input type="email" id="email" data-th-field="*{email}" placeholder="name@gmail.com"
+            class="w-full p-3 text-sm border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white" required>
+          <p data-th-if="${#fields.hasErrors('email')}" data-th-errors="*{email}"
+            class="mt-1 text-xs text-red-600 dark:text-red-400">
+            <i class="fa-solid fa-circle-exclamation"></i> <span class="font-medium">Error:</span> Invalid email
+          </p>
+        </div>
+
+        <!-- Password -->
+        <div>
+          <label for="password" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+          <input type="password" id="password" data-th-field="*{password}" placeholder="••••••••"
+            class="w-full p-3 text-sm border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white" required>
+          <p data-th-if="${#fields.hasErrors('password')}" data-th-errors="*{password}"
+            class="mt-1 text-xs text-red-600 dark:text-red-400">
+            <i class="fa-solid fa-circle-exclamation"></i> <span class="font-medium">Error:</span> Invalid password
+          </p>
+        </div>
+
+        <!-- Phone Number -->
+        <div>
+          <label for="phoneNo" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Contact Number</label>
+          <input type="text" id="phoneNo" data-th-field="*{phoneNo}" placeholder="+91 9876543210"
+            class="w-full p-3 text-sm border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white" required>
+          <p data-th-if="${#fields.hasErrors('phoneNo')}" data-th-errors="*{phoneNo}"
+            class="mt-1 text-xs text-red-600 dark:text-red-400">
+            <i class="fa-solid fa-circle-exclamation"></i> <span class="font-medium">Error:</span> Invalid phone number
+          </p>
+        </div>
+
+        <!-- About -->
+        <div>
+          <label for="message" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">About You</label>
+          <textarea id="message" rows="3" data-th-field="*{about}" placeholder="Write a short bio..."
+            class="w-full p-3 text-sm border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"></textarea>
+        </div>
+
+        <!-- Signup Button -->
+        <div class="flex justify-center">
+          <button type="submit"
+            class="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3 transition dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">
+            <i class="fa-solid fa-user-plus mr-2"></i> Sign Up
+          </button>
+        </div>
+      </form>
+
+      <!-- Divider -->
+      <div class="flex items-center justify-center my-6">
+        <span class="w-1/5 border-b dark:border-gray-600"></span>
+        <span class="px-2 text-sm text-gray-500 dark:text-gray-400">Already have an account?</span>
+        <span class="w-1/5 border-b dark:border-gray-600"></span>
+      </div>
+
+      <!-- Login Redirect -->
+      <p class="text-center text-sm text-gray-600 dark:text-gray-400">
+        <a data-th-href="@{'/login'}" class="text-blue-600 hover:underline dark:text-blue-400">Login here</a>
+      </p>
+
     </div>
+  </div>
 </body>
 
 </html>

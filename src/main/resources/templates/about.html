@@ -1,16 +1,71 @@
 <!DOCTYPE html>
-<html 
-    lang="en"
-    th:replace="~{base :: parent(~{::#content},~{::title})}"
->
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title})}">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Page</title>
 </head>
-<body>
-    <div id="content">
-        <p>This is about page</p>
+<body class="bg-gradient-to-r from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+    <div id="content" class="flex items-center justify-center min-h-[550px] p-6">
+        <div class="max-w-3xl w-full">
+            <div
+                class="p-8 bg-white border border-gray-200 rounded-2xl shadow-lg hover:shadow-2xl transition dark:bg-gray-800 dark:border-gray-700"
+            >
+                <!-- Title -->
+                <h1 class="text-4xl font-extrabold text-center text-blue-600 mb-6">ℹ️ About This Website</h1>
+                
+                <!-- Intro -->
+                <p class="text-lg text-gray-700 dark:text-gray-300 mb-4 text-center">
+                    <strong>Smart Contact Manager</strong> is a web application built with <span class="text-blue-500">Spring Boot</span> and <span class="text-green-600">MySQL</span> that helps users securely store and manage their personal and professional contacts.
+                </p>
+                <p class="text-lg text-gray-700 dark:text-gray-300 mb-6 text-center">
+                    Traditional phone contacts are limited. This project gives you an <span class="font-semibold">organized, secure, and scalable</span> way to manage contacts online.
+                </p>
+
+                <!-- Tech Stack Section -->
+                <h2 class="text-2xl font-bold text-blue-500 mb-4 text-center">💻 Tech Stack</h2>
+                
+                <ol class="relative border-l border-gray-300 dark:border-gray-600">
+                    <li class="mb-6 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                            <i class="fa-solid fa-server text-blue-600"></i>
+                        </span>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">Backend</h3>
+                        <p class="text-gray-700 dark:text-gray-300">Spring Boot, Spring Security, Spring Data JPA, Hibernate</p>
+                    </li>
+                    <li class="mb-6 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-green-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-green-900">
+                            <i class="fa-solid fa-laptop-code text-green-600"></i>
+                        </span>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">Frontend</h3>
+                        <p class="text-gray-700 dark:text-gray-300">Thymeleaf, Bootstrap/Tailwind CSS, JavaScript</p>
+                    </li>
+                    <li class="mb-6 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-yellow-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-yellow-900">
+                            <i class="fa-solid fa-database text-yellow-600"></i>
+                        </span>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">Database</h3>
+                        <p class="text-gray-700 dark:text-gray-300">MySQL</p>
+                    </li>
+                    <li class="mb-6 ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-pink-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-pink-900">
+                            <i class="fa-brands fa-google text-pink-600"></i>
+                        </span>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">Authentication</h3>
+                        <p class="text-gray-700 dark:text-gray-300">Google OAuth2</p>
+                    </li>
+                    <li class="ml-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-purple-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-purple-900">
+                            <i class="fa-solid fa-wrench text-purple-600"></i>
+                        </span>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">Build Tool</h3>
+                        <p class="text-gray-700 dark:text-gray-300">Maven</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>
