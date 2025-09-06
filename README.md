@@ -31,6 +31,7 @@ A full-stack **Spring Boot** application to securely manage your personal and pr
 
 git clone https://github.com/VivekYadav796/SmartContactManager.git
 cd SmartContactManager
+
 2️⃣ Configure Database
 Create a MySQL database:
 
