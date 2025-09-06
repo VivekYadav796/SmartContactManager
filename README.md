@@ -30,14 +30,16 @@ A full-stack **Spring Boot** application to securely manage your personal and pr
 ### 1️⃣ Clone the repo
 
 git clone https://github.com/VivekYadav796/SmartContactManager.git
+
 cd SmartContactManager
 
 2️⃣ Configure Database
 Create a MySQL database:
 
-CREATE DATABASE user;
-Update your local credentials in application-dev.properties:
 
+CREATE DATABASE user;
+
+Update your local credentials in application-dev.properties:
 DB_USER=root
 DB_PASS=yourpassword
 GOOGLE_CLIENT_ID=your-google-client-id
@@ -46,5 +48,4 @@ GOOGLE_CLIENT_SECRET=your-google-client-secret
 3️⃣ Run the application
 Using Maven:
 
-Copy code
 mvn spring-boot:run
